@@ -92,6 +92,10 @@ class point{
     p3.Abscisse=2;
     p3.Ordonnee=4;
     p3.Affiche ();
+    //on doit utiliser Setters :
+    p3.setNom("Test");
+    p3.setAbscisse(2);
+    p3.setOrdonnée(4);
     }
 
 }
