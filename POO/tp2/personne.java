@@ -9,7 +9,7 @@ class personne {
         this.age=30;
         this.sexe="Homme";
     }
-     public personne(String nom,String prenom,int age,String sexe){
+    public personne(String nom,String prenom,int age,String sexe){
         this.nom=nom;
         this.prenom=prenom;
         this.age=age;
