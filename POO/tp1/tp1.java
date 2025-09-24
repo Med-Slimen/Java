@@ -88,6 +88,10 @@ class point{
     System.out.println(" le nom du point p1 est : " + x);
     System.out.println(" son abscisse est : " + y);
     System.out.println(" son ordonnée est : " + z);
+    p3.Nom="Test";
+    p3.Abscisse=2;
+    p3.Ordonnee=4;
+    p3.Affiche ();
     }
 
 }
