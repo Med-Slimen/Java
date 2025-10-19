@@ -8,7 +8,7 @@ public class Paie {
         employees[3]=new Employe_commerciaux("mo7sen",20,30);
         employees[4]=new Employe_commerciaux("asma",20,30);
         for (Employe e: employees){
-            System.out.println(e.getNom()+" gangne "+e.getSalaireEmp()+" D");
+            System.out.println(e.getNom()+" gaangne "+e.getSalaireEmp()+" D");
         }
 
     }
