@@ -1,13 +1,13 @@
-public class Employe_ordinaire extends Employe {
-    public Employe_ordinaire(String nom){
+public class Employe_responsable extends Employe {
+    public Employe_responsable(String nom){
         super(nom);
     }
-    public Employe_ordinaire(int heure,int tarifHorraire,String nom){
+    public Employe_responsable(int heure,int tarifHorraire,String nom){
         super(heure, tarifHorraire, nom);
     }
     public void setInfoSalaire(int heurTravaille,int tarifHorraire){
-        super.heurTravaille=heurTravaille;
-        super.tarifHorraire=tarifHorraire;
+       super.heurTravaille=heurTravaille;
+       super.tarifHorraire=tarifHorraire;
     }
     public double getSalaireEmp(){
         if (heurTravaille<39){
@@ -15,7 +15,7 @@ public class Employe_ordinaire extends Employe {
         }
         else{
             int heurSup=heurTravaille-39;
-            return 39*tarifHorraire+(heurSup*(tarifHorraire*1.3));
+            return 39*tarifHorraire+(heurSup*(tarifHorraire*1.5));
         }
     }
 }
