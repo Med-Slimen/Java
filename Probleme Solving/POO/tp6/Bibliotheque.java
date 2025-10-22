@@ -64,7 +64,7 @@ public class Bibliotheque {
         Bibliotheque b=new Bibliotheque(capaciteMax);
         System.out.println("--------------- Bibliotheque liste_livre ----------------");
         for(Documents d:listDocs){
-            if ( d!=null && d.getType().equals("Livre")) {
+            if (d instanceof Livres) {
                 b.Ajout_doc(d);
             }
         }
@@ -74,7 +74,7 @@ public class Bibliotheque {
         Bibliotheque b=new Bibliotheque(capaciteMax);
         System.out.println("--------------- Bibliotheque liste_article ----------------");
         for(Documents d:listDocs){
-            if (d!=null && d.getType().equals("Article")) {
+            if (d instanceof Article) {
                 b.Ajout_doc(d);
             }
         }
@@ -84,7 +84,7 @@ public class Bibliotheque {
         System.out.println("--------------- Bibliotheque liste_docsimples ----------------");
         Bibliotheque b=new Bibliotheque(capaciteMax);
         for(Documents d:listDocs){
-            if (d!=null && d.getType().equals("Document")) {
+            if (d instanceof Documents) {
                 b.Ajout_doc(d);
             }
         }
@@ -94,7 +94,7 @@ public class Bibliotheque {
         Bibliotheque b=new Bibliotheque(capaciteMax);
         System.out.println("--------------- Bibliotheque liste_periodique ----------------");
         for(Documents d:listDocs){
-            if (d!=null && d.getType().equals("Periodique")) {
+            if (d instanceof Periodique) {
                 b.Ajout_doc(d);
             }
         }
