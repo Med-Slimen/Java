@@ -5,7 +5,7 @@ public class Periodique extends Documents {
         this.freqPar = freqPar;
     }
     public void edition(){
-        System.out.println("Type : "+getType()+" , Titre : "+getTitre()+" numId : "+getNumId()+" nbPages : "+getNbPages()+"freqPar : "+getFreqPar());
+        System.out.println("Type : "+getType()+" , Titre : "+getTitre()+" numId : "+getNumId()+" nbPages : "+getNbPages()+", freqPar : "+getFreqPar());
     }
     public int getFreqPar() {
         return freqPar;

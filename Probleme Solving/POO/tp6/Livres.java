@@ -5,7 +5,7 @@ public class Livres extends Article {
         this.nomEditeur = nomEditeur;
     }
     public void edition(){
-        System.out.println("Type : "+getType()+" , Titre : "+getTitre()+" numId : "+getNumId()+" nbPages : "+getNbPages()+"nomAuteur : "+getNomAuteur()+"NomEditeur : "+getNomEditeur());
+        System.out.println("Type : "+getType()+" , Titre : "+getTitre()+" numId : "+getNumId()+", nbPages : "+getNbPages()+", nomAuteur : "+getNomAuteur()+", NomEditeur : "+getNomEditeur());
     }
     public String getNomEditeur() {
         return nomEditeur;

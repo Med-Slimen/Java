@@ -8,10 +8,10 @@ public class Documents {
         this.nbPages = nbPages;
     }
     public void edition(){
-        System.out.println("Type : "+getType()+" , Titre : "+getTitre()+" numId : "+getNumId()+" nbPages : "+getNbPages());
+        System.out.println("Type : "+getType()+" , Titre : "+getTitre()+", numId : "+getNumId()+", nbPages : "+getNbPages());
     }
     public String getType(){
-        return "Documents";
+        return "Document";
     }
     public String getTitre() {
         return titre;
