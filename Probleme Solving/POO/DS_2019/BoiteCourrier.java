@@ -1,5 +1,5 @@
 public class BoiteCourrier {
-    private Courrier[] courriers;
+    public Courrier[] courriers;
     private int n;
     public BoiteCourrier(int n){
         this.n = n;
@@ -24,8 +24,9 @@ public class BoiteCourrier {
         return s;
     }
     public void afficher(){
+        System.out.println("Tous les courriers : ");
         for (int i = 0; i < n; i++){
-            if (!courriers[i].estValide()){
+            if (courriers[i].estValide()){
                 System.out.println("Courier Valide");
             }
             else{
