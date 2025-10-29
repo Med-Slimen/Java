@@ -11,5 +11,6 @@ public class Magic {
         maMain.afficher();
         maMain.jouer();
         maMain.jouer();
+        maMain.afficher();
     }
 }

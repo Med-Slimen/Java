@@ -8,6 +8,6 @@ public class Sortileges extends Carte {
     }
     @Override
     public String toString() {
-        return "Le Sortileges => Cout : "+super.cout+" | nom : "+nom+" | Description :"+desc;
+        return "Cout : "+super.cout+" | nom : "+nom+" | Description :"+desc;
     }
 }

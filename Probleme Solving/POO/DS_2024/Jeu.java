@@ -20,13 +20,27 @@ public class Jeu {
         while(tabCartes[i]==null){
             i++;
         }
-        System.out.println("La Carte joué est : "+tabCartes[i]);
+        System.out.println("La Carte joué est : "+tabCartes[i].getClass().getSimpleName()+" | "+tabCartes[i]);
         tabCartes[i]=null;
     }
     public void afficher(){
+        System.out.println("----- Affichage des cartes -----");
         for(int i=0;i<nb;i++){
             if (tabCartes[i]!=null){
-                System.out.println(tabCartes[i]);
+                String type="";
+                if (tabCartes[i] instanceof Terrains){
+                    type="Terrain => ";
+                }
+                else if (tabCartes[i] instanceof Creatures){
+                    type="Creature => ";
+                }
+                else if (tabCartes[i] instanceof Sortileges){
+                    type="Sortileges => ";
+                }
+                else{
+                    type="Carte";
+                }
+                System.out.println(type+" "+tabCartes[i]);
             }
         }
     }

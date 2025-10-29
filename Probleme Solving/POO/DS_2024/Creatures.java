@@ -10,6 +10,6 @@ public class Creatures extends Carte{
     }
     @Override
     public String toString() {
-        return "Le Creature => Cout : "+super.cout+" | nom : "+nom+" | nombre des point Degat :"+nbrPointsDegat+" | nombre des point Vie :"+nbrPointVie;
+        return "Cout : "+super.cout+" | nom : "+nom+" | nombre des point Degat :"+nbrPointsDegat+" | nombre des point Vie :"+nbrPointVie;
     }
 }

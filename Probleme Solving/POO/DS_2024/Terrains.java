@@ -6,6 +6,6 @@ public class Terrains extends Carte{
     }
     @Override
     public String toString() {
-        return "Le Terrain => Cout : "+super.cout+" | Couleur : "+c;
+        return "Cout : "+super.cout+" | Couleur : "+c;
     }
 }
