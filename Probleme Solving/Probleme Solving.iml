@@ -16,6 +16,8 @@
       <sourceFolder url="file://$MODULE_DIR$/POO/DS_2024" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/POO/DS_2024_RSI" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/POO/DS_203_RSI" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/POO/tp7 abstract" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/POO/tp7 heritage" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
