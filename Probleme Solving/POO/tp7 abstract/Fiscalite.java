@@ -21,7 +21,7 @@ public class Fiscalite {
                 }
             }
         }
-        System.out.println("la proprietaire  : "+l.tabProp[k] + " le montant : "+min);
+        System.out.println("--- La propriété privée qui paye le moins d’impôts, : "+l.tabProp[k] + " le montant : "+min);
         l.supprimer(l.tabProp[2]);
         l.afficherPropriete();
         System.out.println("--- Lotissement Privé ---");
