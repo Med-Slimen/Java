@@ -21,7 +21,20 @@ class Factorielle
                     " premiers entiers : "+ factorielle );
         }
     }
-    catch(NegativeValueException | SuperieurA20Exception n){
-        System.out.print(n.getMessage());
+    catch ( NegativeValueException | ArrayIndexOutOfBoundsException e){
+        if (e instanceof NegativeValueException){
+            System.out.println(e.getMessage());
+        }
+        else{
+            System.out.println("Pas de parametres");
+        }
+    }
+    catch(NumberFormatException | SuperieurA20Exception n){
+        if (n instanceof SuperieurA20Exception){
+            System.out.println(n.getMessage());
+        }
+        else{
+            System.out.println("Entrer un nombre");
+        }
     }
 }}
