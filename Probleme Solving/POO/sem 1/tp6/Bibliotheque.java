@@ -1,5 +1,3 @@
-import javax.print.Doc;
-
 public class Bibliotheque {
     private Documents[] listDocs;
     private int nombreDocuments;
