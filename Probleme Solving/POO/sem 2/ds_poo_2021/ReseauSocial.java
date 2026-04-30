@@ -4,7 +4,7 @@ public class ReseauSocial {
     HashMap<Personne, ArrayList<Personne>> reseau ;
     // pour chaque personne on associe une liste de suiveurs
     public ReseauSocial() {
-        reseau = new HashMap <Personne, ArrayList<Personne>>() ;
+        reseau = new HashMap<>() ;
     }
     public void ajouterUtilisateur(Personne p){
         if(reseau.containsKey(p)){

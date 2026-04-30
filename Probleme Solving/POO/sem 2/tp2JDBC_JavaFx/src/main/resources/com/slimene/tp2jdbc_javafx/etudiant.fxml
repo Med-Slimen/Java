@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.slimene.tp2jdbc_javafx.EtudiantController">
+   <children>
+      <HBox prefHeight="246.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="208.0" prefWidth="382.0">
+               <children>
+                  <Label prefHeight="46.0" prefWidth="167.0" text="Information Etudiant" />
+                  <HBox prefHeight="55.0" prefWidth="366.0">
+                     <children>
+                        <Label prefHeight="46.0" prefWidth="116.0" text="Nom" />
+                        <TextField fx:id="nom" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="56.0" prefHeight="55.0" prefWidth="366.0">
+                     <children>
+                        <Label prefHeight="46.0" prefWidth="115.0" text="Prenom" />
+                        <TextField fx:id="prenom" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="112.0" prefHeight="55.0" prefWidth="366.0">
+                     <children>
+                        <Label prefHeight="46.0" prefWidth="114.0" text="Sexe" />
+                        <RadioButton fx:id="female" mnemonicParsing="false" text="F">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="genre" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="male" layoutX="124.0" layoutY="10.0" mnemonicParsing="false" text="M" toggleGroup="$genre" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="167.0" prefHeight="55.0" prefWidth="366.0">
+                     <children>
+                        <Label prefHeight="46.0" prefWidth="114.0" text="Filiere" />
+                        <ComboBox fx:id="filiere" prefWidth="150.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="176.0" prefWidth="252.0">
+               <children>
+                  <Button fx:id="ajoutBtn" mnemonicParsing="false" onAction="#ajoutEtudiant" prefHeight="38.0" prefWidth="88.0" text="Ajouter" />
+                  <Button fx:id="suppBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#supprimerEtudiant" prefHeight="38.0" prefWidth="88.0" text="Supprimer" />
+                  <Button fx:id="modBtn" layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#modifierEtudiant" prefHeight="38.0" prefWidth="88.0" text="Modifier" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox layoutY="242.0" prefHeight="157.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="nomT" prefWidth="75.0" text="Nom" />
+                  <TableColumn fx:id="prenomT" prefWidth="75.0" text="Prenom" />
+                  <TableColumn fx:id="sexeT" prefWidth="75.0" text="Sexe" />
+                  <TableColumn fx:id="filiereT" prefWidth="75.0" text="Filiere" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

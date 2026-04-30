@@ -42,10 +42,8 @@ public class AddBookController implements Initializable {
     private TableColumn<Personne, String> prenomTab;
     private DataClass data;
     Alert a = new Alert(Alert.AlertType.NONE);
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         mailTab.setCellValueFactory(new PropertyValueFactory<>("mail"));
         nomTab.setCellValueFactory(new PropertyValueFactory<>("nom"));
         prenomTab.setCellValueFactory(new PropertyValueFactory<>("prenom"));
