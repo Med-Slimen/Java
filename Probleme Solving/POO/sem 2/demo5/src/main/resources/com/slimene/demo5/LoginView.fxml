@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.slimene.demo5.LoginController"
+           style="-fx-background-color: #132613;">
+
+    <VBox alignment="CENTER" spacing="24"
+          style="-fx-background-color: #1f3a1f; -fx-background-radius: 16; -fx-padding: 50 60; -fx-max-width: 420; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 30, 0, 0, 10);">
+
+        <Label text="🌿" style="-fx-font-size: 52px;"/>
+        <Label text="UrbanGarden" style="-fx-text-fill: #7ec850; -fx-font-size: 28px; -fx-font-weight: bold;"/>
+        <Label text="Jardinage Urbain Collaboratif"
+               style="-fx-text-fill: #888; -fx-font-size: 13px;"/>
+
+        <VBox spacing="8" maxWidth="300">
+            <Label text="Email" style="-fx-text-fill: #aaa; -fx-font-size: 12;"/>
+            <TextField fx:id="fieldEmail" promptText="votre@email.com"
+                       style="-fx-background-color: #2a402a; -fx-text-fill: white; -fx-prompt-text-fill: #555; -fx-padding: 10 14; -fx-background-radius: 8; -fx-pref-width: 300;"/>
+        </VBox>
+
+        <VBox spacing="8" maxWidth="300">
+            <Label text="Mot de passe" style="-fx-text-fill: #aaa; -fx-font-size: 12;"/>
+            <PasswordField fx:id="fieldPassword" promptText="••••••••"
+                           style="-fx-background-color: #2a402a; -fx-text-fill: white; -fx-prompt-text-fill: #555; -fx-padding: 10 14; -fx-background-radius: 8; -fx-pref-width: 300;"/>
+        </VBox>
+
+        <Label fx:id="lblError" text="" style="-fx-text-fill: #ff6b6b; -fx-font-size: 13;"/>
+
+        <Button fx:id="btnLogin" text="Se connecter"  maxWidth="300"
+                style="-fx-background-color: #7ec850; -fx-text-fill: #132613; -fx-font-weight: bold; -fx-padding: 12 0; -fx-background-radius: 8; -fx-font-size: 15; -fx-cursor: hand;"/>
+
+        <Hyperlink text="Pas encore de compte ? S'inscrire"
+                   style="-fx-text-fill: #7ec850; -fx-border-color: transparent;"/>
+    </VBox>
+</StackPane>

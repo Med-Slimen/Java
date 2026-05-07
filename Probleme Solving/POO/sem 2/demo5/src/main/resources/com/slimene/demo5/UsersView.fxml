@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.slimene.demo5.UsersController"
+      spacing="20" style="-fx-padding: 30; -fx-background-color: #1b2e1b;">
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="👤 Gestion Utilisateurs"
+               style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="searchUser" promptText="🔍 Rechercher un utilisateur..."
+                   style="-fx-background-color: #2a402a; -fx-text-fill: white; -fx-prompt-text-fill: #777; -fx-padding: 8 14; -fx-background-radius: 20; -fx-pref-width: 240;"/>
+        <ComboBox fx:id="filterRole" promptText="Rôle"
+                  style="-fx-background-color: #2a402a; -fx-text-fill: white; -fx-pref-width: 130;"/>
+        <Button text="+ Ajouter utilisateur"
+                style="-fx-background-color: #7ec850; -fx-text-fill: #132613; -fx-font-weight: bold; -fx-padding: 8 18; -fx-background-radius: 20; -fx-cursor: hand;"/>
+    </HBox>
+
+    <TableView fx:id="usersTable" VBox.vgrow="ALWAYS"
+               style="-fx-background-color: #243824; -fx-background-radius: 12;">
+        <columns>
+            <TableColumn fx:id="colUserId" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="colUserName" text="Nom" prefWidth="160"/>
+            <TableColumn fx:id="colUserEmail" text="Email" prefWidth="200"/>
+            <TableColumn fx:id="colUserRole" text="Rôle" prefWidth="120"/>
+            <TableColumn fx:id="colUserGardens" text="Jardins" prefWidth="100"/>
+            <TableColumn fx:id="colUserPlants" text="Plantes" prefWidth="100"/>
+            <TableColumn fx:id="colUserDate" text="Inscription" prefWidth="130"/>
+            <TableColumn fx:id="colUserActions" text="Actions" prefWidth="120"/>
+        </columns>
+    </TableView>
+</VBox>

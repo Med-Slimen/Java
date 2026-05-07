@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.slimene.demo5.PlanningController"
+      spacing="20" style="-fx-padding: 30; -fx-background-color: #1b2e1b;">
+
+    <Label text="📅 Planning Arrosage & Fertilisation"
+           style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <!-- Filters -->
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <DatePicker fx:id="pickerFrom" style="-fx-background-color: #2a402a;"/>
+        <Label text="→" style="-fx-text-fill: white;"/>
+        <DatePicker fx:id="pickerTo" style="-fx-background-color: #2a402a;"/>
+        <ComboBox fx:id="filterType" promptText="Type de tâche"
+                  style="-fx-background-color: #2a402a; -fx-text-fill: white; -fx-pref-width: 170;"/>
+        <ComboBox fx:id="filterPlant" promptText="Filtrer par plante"
+                  style="-fx-background-color: #2a402a; -fx-text-fill: white; -fx-pref-width: 180;"/>
+        <Button text="🔄 Actualiser"
+                style="-fx-background-color: #2e5c2e; -fx-text-fill: white; -fx-padding: 7 16; -fx-background-radius: 8; -fx-cursor: hand;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="+ Ajouter tâche"
+                style="-fx-background-color: #7ec850; -fx-text-fill: #132613; -fx-font-weight: bold; -fx-padding: 8 18; -fx-background-radius: 20; -fx-cursor: hand;"/>
+    </HBox>
+
+    <!-- Legend -->
+    <HBox spacing="20">
+        <HBox spacing="6" alignment="CENTER_LEFT">
+            <Label text="■" style="-fx-text-fill: #4fa3e0; -fx-font-size: 16;"/>
+            <Label text="Arrosage" style="-fx-text-fill: #ccc; -fx-font-size: 13;"/>
+        </HBox>
+        <HBox spacing="6" alignment="CENTER_LEFT">
+            <Label text="■" style="-fx-text-fill: #e0a84f; -fx-font-size: 16;"/>
+            <Label text="Fertilisation" style="-fx-text-fill: #ccc; -fx-font-size: 13;"/>
+        </HBox>
+        <HBox spacing="6" alignment="CENTER_LEFT">
+            <Label text="■" style="-fx-text-fill: #7ec850; -fx-font-size: 16;"/>
+            <Label text="Effectuée" style="-fx-text-fill: #ccc; -fx-font-size: 13;"/>
+        </HBox>
+        <HBox spacing="6" alignment="CENTER_LEFT">
+            <Label text="■" style="-fx-text-fill: #e05050; -fx-font-size: 16;"/>
+            <Label text="En retard" style="-fx-text-fill: #ccc; -fx-font-size: 13;"/>
+        </HBox>
+    </HBox>
+
+    <!-- Planning Table -->
+    <TableView fx:id="planningTable" VBox.vgrow="ALWAYS"
+               style="-fx-background-color: #243824; -fx-background-radius: 12;">
+        <columns>
+            <TableColumn fx:id="colPlanId" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="colPlanPlant" text="Plante" prefWidth="160"/>
+            <TableColumn fx:id="colPlanGarden" text="Jardin" prefWidth="130"/>
+            <TableColumn fx:id="colPlanType" text="Type" prefWidth="120"/>
+            <TableColumn fx:id="colPlanDate" text="Date prévue" prefWidth="140"/>
+            <TableColumn fx:id="colPlanDone" text="Effectuée ?" prefWidth="110"/>
+            <TableColumn fx:id="colPlanNote" text="Note" prefWidth="180"/>
+            <TableColumn fx:id="colPlanActions" text="Actions" prefWidth="120"/>
+        </columns>
+    </TableView>
+</VBox>

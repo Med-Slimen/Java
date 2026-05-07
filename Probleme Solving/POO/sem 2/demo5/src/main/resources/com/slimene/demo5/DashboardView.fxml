@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+
+<ScrollPane fitToWidth="true" xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.slimene.demo5.DashboardController"
+            style="-fx-background: #1b2e1b; -fx-background-color: #1b2e1b;">
+    <VBox spacing="24" style="-fx-padding: 30; -fx-background-color: #1b2e1b;">
+
+        <!-- Header -->
+        <HBox alignment="CENTER_LEFT" spacing="16">
+            <VBox>
+                <Label text="Tableau de Bord" style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;"/>
+                <Label fx:id="lblDate" text="Mercredi, 7 Mai 2025" style="-fx-text-fill: #7ec850; -fx-font-size: 14px;"/>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="lblWeather" text="☀️ 24°C — Tunis"
+                   style="-fx-background-color: #2e5c2e; -fx-text-fill: white; -fx-padding: 10 18; -fx-background-radius: 20; -fx-font-size: 14px;"/>
+        </HBox>
+
+        <!-- Stats Cards -->
+        <HBox spacing="16">
+            <!-- Card 1 -->
+            <VBox HBox.hgrow="ALWAYS" style="-fx-background-color: #2e5c2e; -fx-background-radius: 12; -fx-padding: 20;" spacing="8">
+                <Label text="🌱" style="-fx-font-size: 28px;"/>
+                <Label fx:id="lblTotalPlants" text="42" style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold;"/>
+                <Label text="Plantes enregistrées" style="-fx-text-fill: #aacf8a; -fx-font-size: 13px;"/>
+            </VBox>
+            <!-- Card 2 -->
+            <VBox HBox.hgrow="ALWAYS" style="-fx-background-color: #1a4a6b; -fx-background-radius: 12; -fx-padding: 20;" spacing="8">
+                <Label text="💧" style="-fx-font-size: 28px;"/>
+                <Label fx:id="lblWateringToday" text="7" style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold;"/>
+                <Label text="Arrosages aujourd'hui" style="-fx-text-fill: #8ac4df; -fx-font-size: 13px;"/>
+            </VBox>
+            <!-- Card 3 -->
+            <VBox HBox.hgrow="ALWAYS" style="-fx-background-color: #6b4a1a; -fx-background-radius: 12; -fx-padding: 20;" spacing="8">
+                <Label text="🧪" style="-fx-font-size: 28px;"/>
+                <Label fx:id="lblFertToday" text="3" style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold;"/>
+                <Label text="Fertilisations prévues" style="-fx-text-fill: #dfc08a; -fx-font-size: 13px;"/>
+            </VBox>
+            <!-- Card 4 -->
+            <VBox HBox.hgrow="ALWAYS" style="-fx-background-color: #4a1a1a; -fx-background-radius: 12; -fx-padding: 20;" spacing="8">
+                <Label text="⚠️" style="-fx-font-size: 28px;"/>
+                <Label fx:id="lblAlerts" text="2" style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold;"/>
+                <Label text="Alertes actives" style="-fx-text-fill: #df8a8a; -fx-font-size: 13px;"/>
+            </VBox>
+        </HBox>
+
+        <!-- Charts Row -->
+        <HBox spacing="16">
+            <!-- Watering Chart -->
+            <VBox HBox.hgrow="ALWAYS" style="-fx-background-color: #243824; -fx-background-radius: 12; -fx-padding: 20;" spacing="12">
+                <Label text="💧 Arrosages cette semaine" style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold;"/>
+                <BarChart fx:id="wateringChart" prefHeight="220">
+                    <xAxis><CategoryAxis label="Jour"/></xAxis>
+                    <yAxis><NumberAxis label="Nb plantes"/></yAxis>
+                </BarChart>
+            </VBox>
+            <!-- Plant Health Pie -->
+            <VBox prefWidth="280" style="-fx-background-color: #243824; -fx-background-radius: 12; -fx-padding: 20;" spacing="12">
+                <Label text="🌿 Santé des plantes" style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold;"/>
+                <PieChart fx:id="healthChart" prefHeight="220"/>
+            </VBox>
+        </HBox>
+
+        <!-- Upcoming Tasks -->
+        <VBox style="-fx-background-color: #243824; -fx-background-radius: 12; -fx-padding: 20;" spacing="12">
+            <Label text="📋 Tâches à venir" style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold;"/>
+            <TableView fx:id="tasksTable" prefHeight="180" style="-fx-background-color: transparent;">
+                <columns>
+                    <TableColumn fx:id="colTaskPlant" text="Plante" prefWidth="180"/>
+                    <TableColumn fx:id="colTaskType" text="Type" prefWidth="130"/>
+                    <TableColumn fx:id="colTaskDate" text="Date prévue" prefWidth="150"/>
+                    <TableColumn fx:id="colTaskStatus" text="Statut" prefWidth="120"/>
+                </columns>
+            </TableView>
+        </VBox>
+
+    </VBox>
+</ScrollPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.slimene.demo5.GardensController"
+      spacing="20" style="-fx-padding: 30; -fx-background-color: #1b2e1b;">
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="🏡 Jardins Partagés"
+               style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="searchGarden" promptText="🔍 Rechercher un jardin..."
+                   style="-fx-background-color: #2a402a; -fx-text-fill: white; -fx-prompt-text-fill: #777; -fx-padding: 8 14; -fx-background-radius: 20; -fx-pref-width: 220;"/>
+        <Button text="+ Créer un jardin"
+                style="-fx-background-color: #7ec850; -fx-text-fill: #132613; -fx-font-weight: bold; -fx-padding: 8 18; -fx-background-radius: 20; -fx-cursor: hand;"/>
+    </HBox>
+
+    <!-- Garden Cards Grid (ScrollPane wrapping TilePane) -->
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS"
+                style="-fx-background: #1b2e1b; -fx-background-color: #1b2e1b;">
+        <TilePane fx:id="gardensGrid" hgap="16" vgap="16"
+                  style="-fx-background-color: #1b2e1b; -fx-padding: 4;">
+            <!-- Cards injected dynamically by controller -->
+        </TilePane>
+    </ScrollPane>
+
+    <!-- Garden detail panel (shown on selection) -->
+    <VBox fx:id="gardenDetailPane" visible="false" managed="false"
+          style="-fx-background-color: #243824; -fx-background-radius: 12; -fx-padding: 20;" spacing="12">
+        <HBox alignment="CENTER_LEFT" spacing="12">
+            <Label fx:id="lblDetailGardenName" text="Jardin du Belvédère"
+                   style="-fx-text-fill: #7ec850; -fx-font-size: 18px; -fx-font-weight: bold;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="✏️ Modifier"
+                    style="-fx-background-color: #2e5c2e; -fx-text-fill: white; -fx-padding: 6 14; -fx-background-radius: 8; -fx-cursor: hand;"/>
+            <Button text="✖"
+                    style="-fx-background-color: #4a2020; -fx-text-fill: #ff8080; -fx-padding: 6 12; -fx-background-radius: 8; -fx-cursor: hand;"/>
+        </HBox>
+        <HBox spacing="30">
+            <VBox spacing="4">
+                <Label text="Localisation" style="-fx-text-fill: #888; -fx-font-size: 12;"/>
+                <Label fx:id="lblDetailLocation" text="Tunis, Belvédère"
+                       style="-fx-text-fill: white; -fx-font-size: 14;"/>
+            </VBox>
+            <VBox spacing="4">
+                <Label text="Membres" style="-fx-text-fill: #888; -fx-font-size: 12;"/>
+                <Label fx:id="lblDetailMembers" text="8 membres"
+                       style="-fx-text-fill: white; -fx-font-size: 14;"/>
+            </VBox>
+            <VBox spacing="4">
+                <Label text="Plantes" style="-fx-text-fill: #888; -fx-font-size: 12;"/>
+                <Label fx:id="lblDetailPlants" text="15 plantes"
+                       style="-fx-text-fill: white; -fx-font-size: 14;"/>
+            </VBox>
+            <VBox spacing="4">
+                <Label text="Surface" style="-fx-text-fill: #888; -fx-font-size: 12;"/>
+                <Label fx:id="lblDetailSurface" text="120 m²"
+                       style="-fx-text-fill: white; -fx-font-size: 14;"/>
+            </VBox>
+        </HBox>
+    </VBox>
+</VBox>

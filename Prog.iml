@@ -23,12 +23,16 @@
       <sourceFolder url="file://$MODULE_DIR$/Probleme Solving/POO/sem 1/tp6" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Probleme Solving/POO/sem 1/tp7 abstract" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Probleme Solving/POO/sem 1/tp7 heritage" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Probleme Solving/POO/sem 2/tp1 collection" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Probleme Solving/POO/sem 2/tp1ex2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Probleme Solving/POO/sem 2/tp2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Probleme Solving/POO/sem 2/tp3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Probleme Solving/POO/sem 2/tp1JDBC" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Probleme Solving/POO/tp2JDBC" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Probleme Solving/POO/sem 2/tp1fichier" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Probleme Solving/POO/sem 2/tp2fichier" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="mysql-connector-j-9.7.0" level="project" />
   </component>
 </module>

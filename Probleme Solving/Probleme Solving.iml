@@ -30,8 +30,11 @@
       <sourceFolder url="file://$MODULE_DIR$/POO/sem 2/tp1ex2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/POO/sem 2/tp2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/POO/sem 2/tp3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/POO/sem 2/ds_2024" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/POO/sem 2/tp1JDBC" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="java" level="project" />
   </component>
 </module>

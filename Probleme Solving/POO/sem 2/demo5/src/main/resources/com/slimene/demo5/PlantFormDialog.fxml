@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.slimene.demo5.PlantFormController"
+      spacing="16" style="-fx-padding: 30; -fx-background-color: #1f3a1f; -fx-pref-width: 460;">
+
+    <Label fx:id="lblTitle" text="🌱 Ajouter une Plante"
+           style="-fx-text-fill: #7ec850; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="12" vgap="12">
+        <Label text="Nom commun :" GridPane.rowIndex="0" GridPane.columnIndex="0"
+               style="-fx-text-fill: #ccc;"/>
+        <TextField fx:id="fieldName" promptText="Ex: Tomate cerise"
+                   GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="240"
+                   style="-fx-background-color: #2a402a; -fx-text-fill: white; -fx-padding: 7 12;"/>
+
+        <Label text="Espèce :" GridPane.rowIndex="1" GridPane.columnIndex="0"
+               style="-fx-text-fill: #ccc;"/>
+        <TextField fx:id="fieldSpecies" promptText="Ex: Solanum lycopersicum"
+                   GridPane.rowIndex="1" GridPane.columnIndex="1"
+                   style="-fx-background-color: #2a402a; -fx-text-fill: white; -fx-padding: 7 12;"/>
+
+        <Label text="Catégorie :" GridPane.rowIndex="2" GridPane.columnIndex="0"
+               style="-fx-text-fill: #ccc;"/>
+        <ComboBox fx:id="fieldCategory" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                  prefWidth="240"
+                  style="-fx-background-color: #2a402a; -fx-text-fill: white;"/>
+
+        <Label text="Jardin :" GridPane.rowIndex="3" GridPane.columnIndex="0"
+               style="-fx-text-fill: #ccc;"/>
+        <ComboBox fx:id="fieldGarden" GridPane.rowIndex="3" GridPane.columnIndex="1"
+                  prefWidth="240"
+                  style="-fx-background-color: #2a402a; -fx-text-fill: white;"/>
+
+        <Label text="Fréq. arrosage (j) :" GridPane.rowIndex="4" GridPane.columnIndex="0"
+               style="-fx-text-fill: #ccc;"/>
+        <Spinner fx:id="spinnerWater" min="1" max="30" initialValue="2"
+                 GridPane.rowIndex="4" GridPane.columnIndex="1"
+                 style="-fx-background-color: #2a402a;"/>
+
+        <Label text="Fréq. fertilisation (j) :" GridPane.rowIndex="5" GridPane.columnIndex="0"
+               style="-fx-text-fill: #ccc;"/>
+        <Spinner fx:id="spinnerFert" min="1" max="90" initialValue="14"
+                 GridPane.rowIndex="5" GridPane.columnIndex="1"
+                 style="-fx-background-color: #2a402a;"/>
+
+        <Label text="Date plantation :" GridPane.rowIndex="6" GridPane.columnIndex="0"
+               style="-fx-text-fill: #ccc;"/>
+        <DatePicker fx:id="datePlanted" GridPane.rowIndex="6" GridPane.columnIndex="1"
+                    prefWidth="240"
+                    style="-fx-background-color: #2a402a;"/>
+
+        <Label text="Notes :" GridPane.rowIndex="7" GridPane.columnIndex="0"
+               style="-fx-text-fill: #ccc;"/>
+        <TextArea fx:id="fieldNotes" promptText="Observations, conseils..."
+                  GridPane.rowIndex="7" GridPane.columnIndex="1"
+                  prefHeight="70"
+                  style="-fx-background-color: #2a402a; -fx-text-fill: white; -fx-padding: 7 12;"/>
+    </GridPane>
+
+    <!-- Buttons -->
+    <HBox spacing="12" alignment="CENTER_RIGHT">
+        <Button text="Annuler"
+                style="-fx-background-color: #3a3a3a; -fx-text-fill: white; -fx-padding: 9 22; -fx-background-radius: 8; -fx-cursor: hand;"/>
+        <Button fx:id="btnSave" text="💾 Enregistrer"
+                style="-fx-background-color: #7ec850; -fx-text-fill: #132613; -fx-font-weight: bold; -fx-padding: 9 22; -fx-background-radius: 8; -fx-cursor: hand;"/>
+    </HBox>
+</VBox>

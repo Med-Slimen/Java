@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.slimene.demo5.PlantsController"
+      spacing="20" style="-fx-padding: 30; -fx-background-color: #1b2e1b;">
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="🌱 Gestion des Plantes" style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="searchField" promptText="🔍 Rechercher une plante..."
+                   style="-fx-background-color: #2a402a; -fx-text-fill: white; -fx-prompt-text-fill: #777; -fx-padding: 8 14; -fx-background-radius: 20; -fx-pref-width: 220;"/>
+        <ComboBox fx:id="filterCategory" promptText="Catégorie"
+                  style="-fx-background-color: #2a402a; -fx-text-fill: white; -fx-pref-width: 150;"/>
+        <Button text="+ Ajouter plante"
+                style="-fx-background-color: #7ec850; -fx-text-fill: #132613; -fx-font-weight: bold; -fx-padding: 8 18; -fx-background-radius: 20; -fx-cursor: hand;"/>
+    </HBox>
+
+    <!-- Plants Table -->
+    <TableView fx:id="plantsTable" VBox.vgrow="ALWAYS"
+               style="-fx-background-color: #243824; -fx-background-radius: 12;">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="colName" text="Nom" prefWidth="160"/>
+            <TableColumn fx:id="colSpecies" text="Espèce" prefWidth="160"/>
+            <TableColumn fx:id="colCategory" text="Catégorie" prefWidth="120"/>
+            <TableColumn fx:id="colGarden" text="Jardin" prefWidth="130"/>
+            <TableColumn fx:id="colWaterFreq" text="Arrosage (jours)" prefWidth="140"/>
+            <TableColumn fx:id="colFertFreq" text="Fertilisation (jours)" prefWidth="150"/>
+            <TableColumn fx:id="colHealth" text="Santé" prefWidth="100"/>
+            <TableColumn fx:id="colActions" text="Actions" prefWidth="130"/>
+        </columns>
+    </TableView>
+
+    <!-- Bottom info -->
+    <HBox alignment="CENTER_LEFT">
+        <Label fx:id="lblCount" text="42 plantes trouvées" style="-fx-text-fill: #7ec850; -fx-font-size: 13px;"/>
+    </HBox>
+</VBox>
