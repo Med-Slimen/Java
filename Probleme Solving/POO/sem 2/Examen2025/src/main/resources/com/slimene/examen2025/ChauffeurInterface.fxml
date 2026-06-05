@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="574.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.slimene.examen2025.Controller">
+   <children>
+      <VBox layoutY="-8.0" prefHeight="582.0" prefWidth="800.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="213.0" text="Bolt - Gestion des Réservation " />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="110.0" text="Filtrer par statut" />
+                  <ComboBox fx:id="statusFilterComboBox" prefWidth="150.0" />
+                  <Label layoutX="301.0" layoutY="52.0" prefHeight="17.0" prefWidth="138.0" text="Filtrer par destination" />
+                  <ComboBox fx:id="destinationFilterComboBox" layoutX="329.0" layoutY="48.0" prefWidth="150.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <TableView fx:id="reservationTable" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nomColumn" prefWidth="90.0" text="Nom" />
+                  <TableColumn fx:id="telephoneColumn" prefWidth="99.0" text="Téléphone" />
+                  <TableColumn fx:id="departColumn" prefWidth="107.0" text="Départ" />
+                  <TableColumn fx:id="destinationColumn" prefWidth="128.0" text="Destination" />
+                  <TableColumn fx:id="dateColumn" prefWidth="138.0" text="Date Reservation" />
+                  <TableColumn fx:id="statusColumn" prefWidth="122.0" text="Status" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Valider" />
+                  <Button mnemonicParsing="false" text="Refuse" />
+               </children>
+            </HBox>
+            <TextArea fx:id="resultArea" prefHeight="90.0" prefWidth="760.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

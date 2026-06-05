@@ -1,0 +1,8 @@
+Etudiant [Matricule=ETU001, Nom=Ben Ali, Prenom=Ahmed, Note=10]
+Etudiant [Matricule=ETU002, Nom=Trabelsi, Prenom=Sami, Note=0]
+Etudiant [Matricule=ETU003, Nom=Mansouri, Prenom=Yasmine, Note=0]
+Etudiant [Matricule=ETU004, Nom=Khalfallah, Prenom=Amine, Note=0]
+Etudiant [Matricule=ETU005, Nom=Jaziri, Prenom=Mariem, Note=0]
+Etudiant [Matricule=ETU006, Nom=Bouazizi, Prenom=Omar, Note=0]
+Etudiant [Matricule=ETU007, Nom=Chaabani, Prenom=Salma, Note=0]
+Etudiant [Matricule=ETU008, Nom=Gharbi, Prenom=Hedi, Note=0]

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="474.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.slimene.examen_2024.IntEnsController">
+   <children>
+      <VBox prefHeight="474.0" prefWidth="668.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="293.0" text="Liste des Etudiants" />
+                  <Button mnemonicParsing="false" onAction="#Exporter" text="Exporter" />
+               </children>
+            </HBox>
+            <TableView fx:id="TEtudiant" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="matricule" prefWidth="164.0" text="Matricule" />
+                <TableColumn fx:id="nom" prefWidth="213.0" text="Nom" />
+                  <TableColumn fx:id="prenom" prefWidth="143.9998779296875" text="Prenom" />
+                  <TableColumn fx:id="note" prefWidth="146.4000244140625" text="Note" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" prefHeight="172.0" prefWidth="668.0">
+               <children>
+                  <VBox prefHeight="172.0" prefWidth="548.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="158.0" text="Question la plus difficle" />
+                        <Text fx:id="txtStat" strokeType="OUTSIDE" strokeWidth="0.0" text="La Question la plus difficle :" wrappingWidth="453.3367443084717" />
+                     </children>
+                  </VBox>
+                  <Button alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#afficherQuestionPlusDifficile" text="Statistique" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+question 1 :
+1 / private static String url="localhost:3006"
+
+2/ String query="SELECT libelle from plat";
+try(Statement st=connexion.getCn().createStatement();){
+ResultSet rs=st.excecuteQuery(query);
+while(rs.next()){
+list.add(rs.getString("libelle"));
+}
+
+
+void addHandle(ActionEvent event){
+ String query="SELECT * from plat where libelle=?";
+try(PreparedStatement st=connexion.getCn().prepareStatement(query);){
+st.setString(1,cbplat.getValue())
+ResultSet rs=st.excecuteQuery();
+if(rs.next(){
+double supplement=0
+double montant=Integer.parseInt(txtqte.getText())*rs.getInt("prix");
+if(suppOk.isSelected(){montant+=2000;supplement=2000;}
+list1.add(new Plat_cmd(
+	rs.getInt("id"),
+	rs.getString("libelle"),
+	Integer.parseInt(txtqte.getText()),
+	supplement,
+	montant,
+	rs.getInt("prix")
+);
+}
+
+
+void calculer(ActionEvent event){
+int sum=0;
+for(Plat_cmd p:list1){
+sum+=p.getMontant();
+}
+lblmontant.setText(sum);
+}
+void supprimer(ActionEvent event){
+Plat_cmd p=tableR.getSelectionModel().getSelectedItem();
+String query="delete from plat where id=?"
+try(PreparedStatement ps=connexion.getCn().prepareStatement(query);){
+ps.setInt(1,p.getId());
+if(ps.excuteUpdate()>0){
+sout("element supprimé");}
+else{
+sout("element non supprimé);]
+]
